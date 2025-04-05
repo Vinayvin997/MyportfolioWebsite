@@ -7,79 +7,76 @@
     box-sizing: border-box;
 }
 
+/* General Styles */
 body {
-    font-family: Arial, sans-serif; /* Set a clean font */
-    background-color: #f4f4f9;    /* Light gray background for the page */
-    color: #333;                  /* Dark text color for better readability */
-    line-height: 1.6;             /* Increase line height for easier reading */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-/* 2. Header Section Styles */
 header {
-    background-color: #333;      /* Dark background for the header */
-    color: white;                /* White text color */
-    padding: 30px 0;             /* Add padding (space) at the top and bottom */
-    text-align: center;          /* Center-align the text */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-header h1 {
-    font-size: 3rem;             /* Big font size for the main title */
-}
-
-header p {
-    font-size: 1.2rem;           /* Slightly smaller font for the tagline */
-}
-
-/* 3. Section Styles (About, Projects, Skills, etc.) */
-section {
-    padding: 20px;               /* Add space inside each section */
-    margin: 20px 0;              /* Add space between sections */
-    background-color: white;    /* White background for sections */
-    border-radius: 8px;          /* Round the corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a clean look */
+section#skills {
+  padding: 40px 20px;
+  text-align: center;
 }
 
 h2 {
-    color: #333;                 /* Dark color for section titles */
-    margin-bottom: 10px;         /* Add space below the section title */
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-/* 4. List Styles (for Projects and Skills) */
-ul {
-    list-style: none;            /* Remove default list bullets */
-    padding: 0;                  /* Remove default padding */
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 1s ease-out;
 }
 
-ul li {
-    margin: 10px 0;              /* Add space between list items */
+/* Each Skill Item */
+.skill-item {
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 25px;
+  margin: 10px 0;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-a {
-    color: #333;                 /* Dark color for links */
-    text-decoration: none;       /* Remove the underline from links */
+.skill-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-a:hover {
-    text-decoration: underline;  /* Add underline on hover for links */
+.skill-icon {
+  font-size: 22px;
 }
 
-/* 5. Footer Section Styles */
-footer {
-    background-color: #333;      /* Dark background for the footer */
-    color: white;                /* White text color */
-    text-align: center;          /* Center-align the text */
-    padding: 10px;               /* Add padding to the footer */
-    margin-top: 20px;            /* Add space above the footer */
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* 6. Responsive Design for Mobile Devices */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;         /* Smaller title on smaller screens */
-    }
-
-    section {
-        padding: 15px;           /* Less padding on small screens */
-        margin: 10px 0;          /* Less margin between sections */
-    }
-}
