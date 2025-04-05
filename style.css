@@ -127,6 +127,87 @@ h2 {
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s;
 }
+      /* === Work History Section === */
+.experience-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.experience-card {
+  background: #f3f6f9;
+  border-left: 6px solid #007BFF;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.experience-card:nth-child(2) { animation-delay: 0.3s; }
+.experience-card:nth-child(3) { animation-delay: 0.6s; }
+
+.experience-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.experience-card p {
+  font-size: 16px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.experience-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.experience-card ul li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+/* Animation */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-card {
+    transform: translateY(30px);
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 
 .resume-button:hover {
   background-color: #218838;
